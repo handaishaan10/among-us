@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Impostor Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Players Status</h2>
+        <a href="/game/generate">Reset (QR CODES) </a> |
+        <a href="/game/scan">Scan QR</a> |
+        <a href="/logout">Logout</a>
+        <ul>
+            <% players.forEach(player => { %>
+                <li>
+                    <strong><%= player.name %></strong> - 
+                    <%= player.status.toUpperCase() %> 
+                    (<a href="/qrcodes/<%= player.qrCodeID %>.png" target="_blank">QR</a>)
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
