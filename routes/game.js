@@ -11,8 +11,8 @@ router.get('/generate', isLoggedIn, async (req, res) => {
     await Player.deleteMany();
 
     const names = [
-        "Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot",
-        "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima"
+        "Player1", "Player2", "Player3", "Player4", "Player5", "Player6",
+        "Player7", "Player8", "Player9", "Player10", "Player11", "Player12"
     ];
 
     const players = [];
